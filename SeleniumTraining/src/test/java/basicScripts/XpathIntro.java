@@ -19,8 +19,10 @@ public class XpathIntro {
 
 	driver.get("https://developer.salesforce.com/signup");
 	driver.findElement(By.xpath("//input[@id='first_name']")).sendKeys("Dilawar");
-	driver.findElement(By.xpath("//input[@id='last_name']")).sendKeys("Khan");
+	//driver.findElement(By.xpath("//input[@id='last_name']")).sendKeys("Khan");
+	//driver.findElement(By.xpath("//input[starts-with(@id,'last_name')]")).sendKeys("Khan");
 	//driver.quit();
+	driver.findElement(By.xpath("//input[contains(@name,'user[first_name]')]")).sendKeys("Hello Khan");
 
 	}
 
