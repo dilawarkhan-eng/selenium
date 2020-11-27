@@ -22,8 +22,9 @@ public class XpathIntro {
 	//driver.findElement(By.xpath("//input[@id='last_name']")).sendKeys("Khan");
 	//driver.findElement(By.xpath("//input[starts-with(@id,'last_name')]")).sendKeys("Khan");
 	//driver.quit();
-	driver.findElement(By.xpath("//input[contains(@name,'user[first_name]')]")).sendKeys("Hello Khan");
-
+	//driver.findElement(By.xpath("//input[contains(@name,'user[first_name]')]")).sendKeys("Hello Khan");
+	driver.findElement(By.xpath("//input[@type='text' and @name='user[first_name]']")).sendKeys("Dilawar");
+	driver.findElement(By.cssSelector("#first_name")).sendKeys("CSS Selector");
 	}
 
 }
