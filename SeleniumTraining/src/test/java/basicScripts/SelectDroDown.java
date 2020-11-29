@@ -19,10 +19,14 @@ public class SelectDroDown {
 
 				WebDriver driver = new ChromeDriver();
 				//driver.manage().window().maximize();
-				driver.get("https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html");
-				/*WebElement ddown=driver.findElement(By.name("employees_c"));
+				//driver.get("https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html");
+				driver.get("https://www.sugarcrm.com/request-demo/");
+				WebElement ddown=driver.findElement(By.name("employees_c"));
+				
 				
 				Select select = new Select(ddown);
+			WebElement firstSelected=	select.getFirstSelectedOption();
+		System.out.println(	firstSelected.getText());
 				select.selectByValue("level1");
 				
 				Thread.sleep(2000);
@@ -33,8 +37,8 @@ public class SelectDroDown {
 				select.selectByIndex(5);
 				Thread.sleep(2000);
 				
-*/
-			WebElement ddown=	driver.findElement(By.id("multi-select"));
+
+		/*	WebElement ddown=	driver.findElement(By.id("multi-select"));
 			Select select =new Select(ddown);
 			select.selectByValue("California");
 			Thread.sleep(2000);
@@ -54,7 +58,7 @@ public class SelectDroDown {
 			select.deselectByValue("Florida");
 			
 			System.out.println(allitems.size());
-
+*/
 
 	}
 
