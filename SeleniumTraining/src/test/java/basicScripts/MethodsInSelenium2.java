@@ -12,28 +12,24 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MethodsInSelenium2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// System.setProperty("webdriver.chrome.driver",
 		// "F:\\ChromeDriver\\chromedriver.exe");
 		WebDriverManager.chromedriver().setup();
 
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.saucedemo.com/");
+		driver.get("https://www.sugarcrm.com/request-demo/");
 		driver.manage().window().maximize();
-		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-		driver.findElement(By.id("login-button")).click();
+		// driver.findElement(By.xpath("//*[@id='field7']/div/input")).sendKeys("Dilawar");
 
-		List<WebElement> webElements = driver.findElements(By.xpath("//div[@class='inventory_list']/div")); // findElementsBy
-		// System.out.println(webElements);
+		// Thread.sleep(4000);
+//		driver.findElement(By.xpath("//*[@id='field7']/div/input")).clear();
+		//String att = driver.findElement(By.xpath("//*[@id='field7']/div/input")).getAttribute("class");
+		//System.out.println(att);
+		
+		System.out.println(driver.findElement(By.xpath("//*[@id=\'field1\']/div/inputv")).getCssValue("text-transform"));
+		
 
-		driver.navigate().to("https://www.sugarcrm.com"); //Window Handle and Window Handles
-		String windowHandle = driver.getWindowHandle();
-		System.out.println(windowHandle);
-
-		driver.findElement(By.xpath("//*[@id=\"main\"]/section[4]/div/div/div[1]/a")).click();
-		Set<String> windowHandles=driver.getWindowHandles();
-		System.out.println(windowHandles);
 	}
 
 }
